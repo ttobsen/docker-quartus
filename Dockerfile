@@ -2,6 +2,7 @@ FROM archlinux:20200407
 LABEL maintainer="Tobias Baumann <tobias.baumann@elpra.de>"
 
 # install yay deps
+RUN uname -a
 RUN pacman -Syyu git go binutils fakeroot gcc make sudo --needed --noprogressbar --noconfirm && yes|pacman -Scc
 
 # install yay
